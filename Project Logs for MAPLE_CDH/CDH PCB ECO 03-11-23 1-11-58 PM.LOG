@@ -1,0 +1,27 @@
+Removed Pin From Net: NetName=NetDB_2 Pin=U1-31
+Removed Pin From Net: NetName=NetDG_2 Pin=U1-33
+Removed Pin From Net: NetName=NetDR_2 Pin=U1-36
+Added Component: Designator=RB(RESC3216X70X50NL05T20)
+Add component (AddParameter): Name = "Manufacturer"; Value = "Panasonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "ERJ-8ENF1000V"; VariantName = "[No Variations]"
+Added Component: Designator=RG(RESC3216X70X50NL05T20)
+Add component (AddParameter): Name = "Manufacturer"; Value = "Panasonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "ERJ-8GEYJ271V"; VariantName = "[No Variations]"
+Added Component: Designator=RR(RESC3216X70X50NL05T20)
+Add component (AddParameter): Name = "Manufacturer"; Value = "Panasonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "ERJ-8GEYJ271V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetDB_2 Pin=RB-2
+Added Pin To Net: NetName=NetDG_2 Pin=RG-2
+Added Pin To Net: NetName=NetDR_2 Pin=RR-2
+Added Pin To Net: NetName=NetRB_1 Pin=RB-1
+Added Pin To Net: NetName=NetRB_1 Pin=U1-31
+Added Net: Name=NetRB_1
+Added Pin To Net: NetName=NetRG_1 Pin=RG-1
+Added Pin To Net: NetName=NetRG_1 Pin=U1-33
+Added Net: Name=NetRG_1
+Added Pin To Net: NetName=NetRR_1 Pin=RR-1
+Added Pin To Net: NetName=NetRR_1 Pin=U1-36
+Added Net: Name=NetRR_1
+Added Member To Class: ClassName=MAPLE_CDH_Periph Member=Component RB ERJ-8ENF1000V
+Added Member To Class: ClassName=MAPLE_CDH_Periph Member=Component RG ERJ-8GEYJ271V
+Added Member To Class: ClassName=MAPLE_CDH_Periph Member=Component RR ERJ-8GEYJ271V

@@ -1,1 +1,2 @@
-Record=TopLevelDocument|FileName=MAPLE_CDH_SCH.SchDoc|SheetNumber=1
+Record=TopLevelDocument|FileName=MAPLE_CDH_Cntrlr.SchDoc|SheetNumber=1
+Record=NoMainPathDocument|SourceDocument=MAPLE_CDH_Cntrlr.SchDoc|FileName=MAPLE_CDH_Periph.SchDoc|SheetNumber=2

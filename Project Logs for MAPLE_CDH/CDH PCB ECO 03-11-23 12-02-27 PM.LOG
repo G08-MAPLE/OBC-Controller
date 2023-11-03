@@ -1,0 +1,13 @@
+Change Component Footprint: Designator=JP2 Old Footprint=61300211121 New Footprint=61300211121
+Change Component Designator: OldDesignator=J? NewDesignator=J3v3
+Change Component Designator: OldDesignator=J? NewDesignator=JUart
+Change Component Designator: OldDesignator=JP2 NewDesignator=JFl
+Change Component Designator: OldDesignator=JP3 NewDesignator=JTag
+Change Net Name : Old Net Name=NetJ?_2 New Net Name=NetJUart_2
+Change Net Name : Old Net Name=NetJ?_3 New Net Name=NetJUart_3
+Change Net Name : Old Net Name=NetJP2_1 New Net Name=NetJFl_1
+Change Net Name : Old Net Name=NetJP3_1 New Net Name=NetJTag_1
+Change Net Name : Old Net Name=NetJP3_2 New Net Name=NetJTag_2
+Change Net Name : Old Net Name=NetJP3_3 New Net Name=NetJTag_3
+Change Net Name : Old Net Name=NetJP3_4 New Net Name=NetJTag_4
+Added Member To Class: ClassName=MAPLE_CDH_Periph Member=Component JUart 53047-0410
