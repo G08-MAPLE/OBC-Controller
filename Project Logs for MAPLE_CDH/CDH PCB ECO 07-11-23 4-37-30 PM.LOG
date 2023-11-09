@@ -1,0 +1,13 @@
+Change Footprint: Footprint Not Found CON_436500415_MOL
+Change Footprint: Footprint Not Found CON_436500415_MOL
+Added Component: Designator=J(MOLEX_0436500415)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Molex"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "0436500415"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/0436500415/Molex/view-part/425083/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Add Component: Footprint Not Found CON_436500415_MOL
+Added Member To Class: ClassName=MAPLE_CDH_Periph Member=Component J 0436500415
+Add Class Member: Failed to add class member : Component JUart? 436500415

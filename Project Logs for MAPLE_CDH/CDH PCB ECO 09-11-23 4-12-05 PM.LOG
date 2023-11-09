@@ -1,0 +1,19 @@
+Change Footprint: Footprint Not Found CON_436500227_MOL
+Change Footprint: Footprint Not Found CON_436500227_MOL
+Change Component Designator: OldDesignator=C? NewDesignator=C3
+Change Component Designator: OldDesignator=C? NewDesignator=C4
+Change Component Designator: OldDesignator=R3 NewDesignator=R5
+Change Component Designator: OldDesignator=R4 NewDesignator=R6
+Add Component: Footprint Not Found CON_436500227_MOL
+Add Component: Footprint Not Found CON_436500227_MOL
+Add Pin To Net: Unknown Pin: Pin J5v-1
+Add Pin To Net: Unknown Pin: Pin J5v-2
+Add Pin To Net: Unknown Pin: Pin J25v-1
+Add Pin To Net: Unknown Pin: Pin J25v-2
+Change Net Name : Old Net Name=NetC?_1 New Net Name=NetC3_1
+Change Net Name : Old Net Name=NetR3_1 New Net Name=NetR5_1
+Added Member To Class: ClassName=MAPLE_CDH_Periph Member=Component C4 CL03A104KQ3NNNC
+Add Class Member: Failed to add class member : Component J5v 436500227
+Add Class Member: Failed to add class member : Component J25v 436500227
+Added Member To Class: ClassName=MAPLE_CDH_Periph Member=Component R5 RC1206FR-0724K9L
+Added Member To Class: ClassName=MAPLE_CDH_Periph Member=Component R6 RC1206FR-07100KL

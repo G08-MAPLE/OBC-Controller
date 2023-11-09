@@ -1,0 +1,20 @@
+Change Footprint: Footprint Not Found CON_436500415_MOL
+Change Footprint: Footprint Not Found CON_436500415_MOL
+Change Component Comment : Designator=JTag Old Comment=53047-0410 New Comment=436500415
+Change Component Comment : Designator=JUart Old Comment=53047-0410 New Comment=436500415
+Change Managed Component Library Link : Designator=JTag Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=C654756E-C6E6-4377-879F-2768C80B7E2A New ItemGUID= Old RevisionGUID=EEE6E0F0-43F5-47F1-B48D-F785D0CE979A New RevisionGUID=
+Change Managed Component Library Link : Designator=JUart Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=C654756E-C6E6-4377-879F-2768C80B7E2A New ItemGUID= Old RevisionGUID=EEE6E0F0-43F5-47F1-B48D-F785D0CE979A New RevisionGUID=
+Change component parameters: Designator = "JTag" ("JTag"); Footprint = "FP-53047-0410-MFG"; UniqueID = "\PLCCRZUY" ("\PLCCRZUY")
+Change component parameters (AddParameter): Name = "Copyright"; Value = "Copyright (C) 2023 Ultra Librarian. All rights reserved."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Digi-Key_Part_Number_1"; Value = "WM1919-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "436500415"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Molex Connector Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "DEV"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JUart" ("JUart"); Footprint = "FP-53047-0410-MFG"; UniqueID = "\CEVUWYEG" ("\CEVUWYEG")
+Change component parameters (AddParameter): Name = "Copyright"; Value = "Copyright (C) 2023 Ultra Librarian. All rights reserved."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Digi-Key_Part_Number_1"; Value = "WM1919-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "436500415"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Molex Connector Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "DEV"; VariantName = "[No Variations]"

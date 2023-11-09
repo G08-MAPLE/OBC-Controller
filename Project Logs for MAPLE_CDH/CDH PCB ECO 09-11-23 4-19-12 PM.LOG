@@ -1,0 +1,19 @@
+Add Component: Footprint Not Found CON_436500227_MOL
+Add Component: Footprint Not Found CON_436500227_MOL
+Add Component: Footprint Not Found CON_436500227_MOL
+Add Component: Footprint Not Found CON_436500227_MOL
+Add Pin To Net: Unknown Pin: Pin J1-1
+Add Pin To Net: Unknown Pin: Pin J1-2
+Add Pin To Net: Unknown Pin: Pin J3v3-1
+Add Pin To Net: Unknown Pin: Pin J3v3-2
+Add Pin To Net: Unknown Pin: Pin J5v-1
+Add Pin To Net: Unknown Pin: Pin J5v-2
+Add Pin To Net: Unknown Pin: Pin J25v-2
+Change Net Name : Old Net Name=NetR3_1 New Net Name=NetJ1_1
+Added Pin To Net: NetName=NetJ25v_1 Pin=R3-2
+Added Pin To Net: NetName=NetJ25v_1 Pin=R5-2
+Added Net: Name=NetJ25v_1
+Add Class Member: Failed to add class member : Component J1 436500227
+Add Class Member: Failed to add class member : Component J3v3 436500227
+Add Class Member: Failed to add class member : Component J5v 436500227
+Add Class Member: Failed to add class member : Component J25v 436500227

@@ -1,0 +1,23 @@
+Change Component Footprint: Designator=JTag Old Footprint=FP-53047-0410-MFG New Footprint=MOLEX_0436500415
+Change Component Comment : Designator=JTag Old Comment=436500415 New Comment=0436500415
+Change component parameters: Designator = "JTag" ("JTag"); Footprint = "FP-53047-0410-MFG"; UniqueID = "\MWRQRJUH" ("\MWRQRJUH")
+Change component parameters (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Molex"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "0436500415"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/0436500415/Molex/view-part/425083/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=JUart(MOLEX_0436500415)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Molex"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "0436500415"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/0436500415/Molex/view-part/425083/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=JUart-1
+Added Pin To Net: NetName=NetJUart_2 Pin=JUart-2
+Added Pin To Net: NetName=NetJUart_3 Pin=JUart-3
+Added Pin To Net: NetName=NetC2_1 Pin=JUart-4
+Added Member To Class: ClassName=MAPLE_CDH_Periph Member=Component JUart 0436500415

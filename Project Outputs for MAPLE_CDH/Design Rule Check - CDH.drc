@@ -1,0 +1,97 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc
+Date     : 08/11/23
+Time     : 12:23:32 PM
+
+Processing Rule : Clearance Constraint (Gap=7.874mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=8mil) (OnLayer('Top Layer')),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=8mil) (OnLayer('Bottom Layer')),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=3.5mil) (Max=100mil) (Preferred=15mil) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Minimum Annular Ring (Minimum=3mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=7.874mil) (Max=248.031mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=3.937mil) (All),(All)
+   Violation between Minimum Solder Mask Sliver Constraint: (3.811mil < 3.937mil) Between Pad U2-1(1130mil,3729.803mil) on Top Layer And Pad U2-2(1130mil,3692.401mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.811mil < 3.937mil) Between Pad U2-2(1130mil,3692.401mil) on Top Layer And Pad U2-3(1130mil,3655mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.811mil < 3.937mil) Between Pad U2-4(1224.488mil,3655mil) on Top Layer And Pad U2-5(1224.488mil,3692.401mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.811mil < 3.937mil) Between Pad U2-5(1224.488mil,3692.401mil) on Top Layer And Pad U2-6(1224.488mil,3729.803mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]
+Rule Violations :4
+
+Processing Rule : Silk To Solder Mask (Clearance=3.937mil) (IsPad),(All)
+   Violation between Silk To Solder Mask Clearance Constraint: (2.677mil < 3.937mil) Between Pad U1-1(1639.618mil,4832.803mil) on Top Layer And Text "*" (1572.618mil,4807.803mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [2.677mil]
+Rule Violations :1
+
+Processing Rule : Silk to Silk (Clearance=3.937mil) (All),(All)
+   Violation between Silk To Silk Clearance Constraint: (3.245mil < 3.937mil) Between Arc (2871.929mil,4400mil) on Top Overlay And Text "DG" (2890.016mil,4370.01mil) on Top Overlay Silk Text to Silk Clearance [3.245mil]
+   Violation between Silk To Silk Clearance Constraint: (3.245mil < 3.937mil) Between Arc (2871.929mil,4495mil) on Top Overlay And Text "DR" (2890.016mil,4465.01mil) on Top Overlay Silk Text to Silk Clearance [3.245mil]
+   Violation between Silk To Silk Clearance Constraint: (1.788mil < 3.937mil) Between Arc (2873.386mil,4300mil) on Top Overlay And Text "DB" (2890.016mil,4270.01mil) on Top Overlay Silk Text to Silk Clearance [1.788mil]
+   Violation between Silk To Silk Clearance Constraint: (2.059mil < 3.937mil) Between Text "*" (1572.618mil,4807.803mil) on Top Overlay And Text "U1" (1485.013mil,4820.01mil) on Top Overlay Silk Text to Silk Clearance [2.059mil]
+Rule Violations :4
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Board Clearance Constraint (Gap=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Room MAPLE_CDH_Cntrlr (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Cntrlr'))
+   Violation between Room Definition: Between Component U1-ESP32-WROOM-32UE-N16 (1984.106mil,4507.803mil) on Top Layer And Room MAPLE_CDH_Cntrlr (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Cntrlr')) 
+Rule Violations :1
+
+Processing Rule : Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph'))
+   Violation between Room Definition: Between Component SW1-FSM4JSMA (3070mil,4730mil) on Top Layer And Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) 
+   Violation between Room Definition: Between Component SWR-FSM4JSMA (1120.866mil,4641.417mil) on Top Layer And Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) 
+   Violation between Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SIP Component JTag-0436500415 (1017.835mil,3175.276mil) on Top Layer 
+   Violation between Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SIP Component JUart-0436500415 (3415mil,4170mil) on Top Layer 
+   Violation between Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And Small Component J1-53047-0210 (977.284mil,3680.394mil) on Top Layer 
+   Violation between Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And Small Component J3v3-53047-0210 (977.284mil,4320.394mil) on Top Layer 
+   Violation between Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And Small Component J5v-53047-0210 (977.284mil,3995.394mil) on Top Layer 
+   Violation between Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And Small Component JFl-61300211121 (2270mil,3960mil) on Top Layer 
+   Violation between Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SMT Small Component C1-CL10A105KA8NNNC (1412.673mil,4578.394mil) on Top Layer 
+   Violation between Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SMT Small Component C2-CL10A105KA8NNNC (3410.315mil,4580mil) on Top Layer 
+   Violation between Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SMT Small Component C3-CL10A105KA8NNNC (1135mil,3820mil) on Top Layer 
+   Violation between Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SMT Small Component C4-CL03A104KQ3NNNC (1130.039mil,3900mil) on Top Layer 
+   Violation between Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SMT Small Component DB-LTST-C193TBKT-5A (2805.472mil,4300mil) on Top Layer 
+   Violation between Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SMT Small Component DG-LTST-C193KGKT-5A (2805mil,4400mil) on Top Layer 
+   Violation between Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SMT Small Component DR-LTST-C193KRKT-5A (2805mil,4495mil) on Top Layer 
+   Violation between Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SMT Small Component R1-RMCF1206FT10K0 (1464.158mil,4718.489mil) on Top Layer 
+   Violation between Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SMT Small Component R2-RMCF1206FT10K0 (3410mil,4730mil) on Top Layer 
+   Violation between Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SMT Small Component RB-ERJ-8ENF1000V (2618.898mil,4300mil) on Top Layer 
+   Violation between Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SMT Small Component RG-ERJ-8GEYJ271V (2621.102mil,4400mil) on Top Layer 
+   Violation between Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SMT Small Component RR-ERJ-8GEYJ271V (2618.898mil,4495mil) on Top Layer 
+   Violation between Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SOIC Component U2-ADC121C027CIMK (1177.244mil,3692.401mil) on Top Layer 
+Rule Violations :21
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+
+Violations Detected : 31
+Waived Violations : 0
+Time Elapsed        : 00:00:02

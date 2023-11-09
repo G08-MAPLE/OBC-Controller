@@ -1,0 +1,461 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD22\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">08/11/23</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">12:23:32 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc" class="file"><acronym title="C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc">C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">31</td></tr>
+</table>
+</td>
+</table><a name="IDSYDQVUIUHCMNKYLM1CNEIIU0VDZB2JBMA3I1LGFZRPEJ0N3AD1TI"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID20ED4CFT5HQUOTWXI4LR2UHWDNFR3CWFCYTFWPLZFNBBLRBK1HSF">Clearance Constraint (Gap=7.874mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDOPDTZBX0C2FV1RZXMQRMRWSSKJPXYMHGQAFB5J5DZN5EL2RVTS">Clearance Constraint (Gap=8mil) (OnLayer('Top Layer')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID4NYSMCB02KFEB0FCWZY3CKKW5CR3WI5HE1O1N2H1DVXD5D3MBBCI">Clearance Constraint (Gap=8mil) (OnLayer('Bottom Layer')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDYCZNCNQEBK1OD03LLAOAB2BJHNB1EKHB1IFEW2FKDYC0Z5SJCLBI">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDLT2XEK4WW4IIDXANDZTTKBJRCNTM3DMKHTEOTLFCKJFGOH0X0QDO">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTA00ZGKDQ0DAELFBWAJWBDQ0VKJYXCCKDLIE3RFCVKFOKEECYF3O">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDFNYA4ZH4ZFRHCDUR4ZWYVTQ0R4E1YXPBENWTPDVYOWXGLENMQNM">Width Constraint (Min=3.5mil) (Max=100mil) (Preferred=15mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDRITIDJZDIZAQLOTYLFR3RE4Q4OIWBPTWMUXIUHFJO3T4SDNDX1WL">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID10BTKHA1TXOZOECGF14NCEPVVGVQEDPDVXRD1GPCDED1BNJ1C4WB">Minimum Annular Ring (Minimum=3mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDL5DI5BOOYOM2BAMDDBQ2MWNA1FLK50FBATCES3ND50VHTMDIMV1H">Hole Size Constraint (Min=7.874mil) (Max=248.031mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDA54CXCFI5F4KMLU2AIFEO1LJHZDDOKJJDHHJEGIBLWJ2ZJTVU2K">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDU1KARYWPIOJMJFJZCMN1R5JEUG4L24WYJKE52WIYDBLTST5SYRGD">Minimum Solder Mask Sliver (Gap=3.937mil) (All),(All)</a></td>
+<td class="column2">4</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDBKFHNWKS4EWDJJFYAERFRKWJFJP0WQCCATQIXYJIFNIIKYEWIXYB">Silk To Solder Mask (Clearance=3.937mil) (IsPad),(All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAEXIXGXPNJUBPU5QMD0QQZKXBB4ZFQHW2ELFE2L4JVKSDLFXK5AO">Silk to Silk (Clearance=3.937mil) (All),(All)</a></td>
+<td class="column2">4</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOERF350ACZKTN10RG4Q5RKX1GB4ACR5AO1IE3QOPRYDOG3B3OYXF">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID0X4KLMJT4YV1YFSANRNOWEGMEP40HC1Q1XCWSIOHI4DFGQR4ZXK">Board Clearance Constraint (Gap=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDW5JTUI2KFVZ3FHZXO3IDDNMI0DVLGDFJ4ESF4O4DI3N5BIIL02">Room MAPLE_CDH_Cntrlr (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Cntrlr'))</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQMA5ORZMA3QCNXZFKBJ10TGG0DJPVGWJKRBWEYN0SUAPXUYZIZNH">Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph'))</a></td>
+<td class="column2">21</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAOKBI0V5N4WVF2Z4GYBBOCOWZGH5QJINFRFUK0E543ERDL2FPLEC">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">31</td>
+</tr>
+</table><br><a name="IDU1KARYWPIOJMJFJZCMN1R5JEUG4L24WYJKE52WIYDBLTST5SYRGD"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=3.937mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1153.06mil|Location2.X=1158.247mil|Location1.Y=3708.509mil|Location2.Y=3713.696mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1153.06mil|Location2.X=1158.247mil|Location1.Y=3708.509mil|Location2.Y=3713.696mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U2-1(1130mil,3729.803mil) on Top Layer And Pad U2-2(1130mil,3692.401mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1153.06mil|Location2.X=1158.247mil|Location1.Y=3671.107mil|Location2.Y=3676.294mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1153.06mil|Location2.X=1158.247mil|Location1.Y=3671.107mil|Location2.Y=3676.294mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U2-2(1130mil,3692.401mil) on Top Layer And Pad U2-3(1130mil,3655mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1196.241mil|Location2.X=1201.428mil|Location1.Y=3671.107mil|Location2.Y=3676.294mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1196.241mil|Location2.X=1201.428mil|Location1.Y=3671.107mil|Location2.Y=3676.294mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U2-4(1224.488mil,3655mil) on Top Layer And Pad U2-5(1224.488mil,3692.401mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1196.241mil|Location2.X=1201.428mil|Location1.Y=3708.509mil|Location2.Y=3713.696mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1196.241mil|Location2.X=1201.428mil|Location1.Y=3708.509mil|Location2.Y=3713.696mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U2-5(1224.488mil,3692.401mil) on Top Layer And Pad U2-6(1224.488mil,3729.803mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDBKFHNWKS4EWDJJFYAERFRKWJFJP0WQCCATQIXYJIFNIIKYEWIXYB"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=3.937mil) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1606.186mil|Location2.X=1611.373mil|Location1.Y=4813.54mil|Location2.Y=4818.727mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1606.186mil|Location2.X=1611.373mil|Location1.Y=4813.54mil|Location2.Y=4818.727mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (2.677mil &lt; 3.937mil) Between Pad U1-1(1639.618mil,4832.803mil) on Top Layer And Text "*" (1572.618mil,4807.803mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [2.677mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDAEXIXGXPNJUBPU5QMD0QQZKXBB4ZFQHW2ELFE2L4JVKSDLFXK5AO"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk to Silk (Clearance=3.937mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2880.8mil|Location2.X=2885.987mil|Location1.Y=4397.407mil|Location2.Y=4402.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2880.8mil|Location2.X=2885.987mil|Location1.Y=4397.407mil|Location2.Y=4402.593mil|Absolute=True">Silk To Silk Clearance Constraint: (3.245mil &lt; 3.937mil) Between Arc (2871.929mil,4400mil) on Top Overlay And Text "DG" (2890.016mil,4370.01mil) on Top Overlay Silk Text to Silk Clearance [3.245mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2880.8mil|Location2.X=2885.987mil|Location1.Y=4492.407mil|Location2.Y=4497.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2880.8mil|Location2.X=2885.987mil|Location1.Y=4492.407mil|Location2.Y=4497.593mil|Absolute=True">Silk To Silk Clearance Constraint: (3.245mil &lt; 3.937mil) Between Arc (2871.929mil,4495mil) on Top Overlay And Text "DR" (2890.016mil,4465.01mil) on Top Overlay Silk Text to Silk Clearance [3.245mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2881.529mil|Location2.X=2886.716mil|Location1.Y=4297.407mil|Location2.Y=4302.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2881.529mil|Location2.X=2886.716mil|Location1.Y=4297.407mil|Location2.Y=4302.593mil|Absolute=True">Silk To Silk Clearance Constraint: (1.788mil &lt; 3.937mil) Between Arc (2873.386mil,4300mil) on Top Overlay And Text "DB" (2890.016mil,4270.01mil) on Top Overlay Silk Text to Silk Clearance [1.788mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1567.769mil|Location2.X=1574.501mil|Location1.Y=4814.686mil|Location2.Y=4823.654mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1567.769mil|Location2.X=1574.501mil|Location1.Y=4814.686mil|Location2.Y=4823.654mil|Absolute=True">Silk To Silk Clearance Constraint: (2.059mil &lt; 3.937mil) Between Text "*" (1572.618mil,4807.803mil) on Top Overlay And Text "U1" (1485.013mil,4820.01mil) on Top Overlay Silk Text to Silk Clearance [2.059mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDW5JTUI2KFVZ3FHZXO3IDDNMI0DVLGDFJ4ESF4O4DI3N5BIIL02"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Room MAPLE_CDH_Cntrlr (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Cntrlr'))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2371.095mil|Location1.Y=0mil|Location2.Y=4918.413mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2371.095mil|Location1.Y=0mil|Location2.Y=4918.413mil|Absolute=True">Room Definition: Between Component U1-ESP32-WROOM-32UE-N16 (1984.106mil,4507.803mil) on Top Layer And Room MAPLE_CDH_Cntrlr (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Cntrlr')) </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDQMA5ORZMA3QCNXZFKBJ10TGG0DJPVGWJKRBWEYN0SUAPXUYZIZNH"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph'))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3295.394mil|Location1.Y=0mil|Location2.Y=4852.047mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3295.394mil|Location1.Y=0mil|Location2.Y=4852.047mil|Absolute=True">Room Definition: Between Component SW1-FSM4JSMA (3070mil,4730mil) on Top Layer And Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2000mil|Location1.Y=0mil|Location2.Y=4763.465mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2000mil|Location1.Y=0mil|Location2.Y=4763.465mil|Absolute=True">Room Definition: Between Component SWR-FSM4JSMA (1120.866mil,4641.417mil) on Top Layer And Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2000mil|Location1.Y=0mil|Location2.Y=3608.509mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2000mil|Location1.Y=0mil|Location2.Y=3608.509mil|Absolute=True">Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SIP Component JTag-0436500415 (1017.835mil,3175.276mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3528.976mil|Location1.Y=0mil|Location2.Y=4603.233mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3528.976mil|Location1.Y=0mil|Location2.Y=4603.233mil|Absolute=True">Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SIP Component JUart-0436500415 (3415mil,4170mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2000mil|Location1.Y=0mil|Location2.Y=3775.866mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2000mil|Location1.Y=0mil|Location2.Y=3775.866mil|Absolute=True">Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And Small Component J1-53047-0210 (977.284mil,3680.394mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2000mil|Location1.Y=0mil|Location2.Y=4415.866mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2000mil|Location1.Y=0mil|Location2.Y=4415.866mil|Absolute=True">Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And Small Component J3v3-53047-0210 (977.284mil,4320.394mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2000mil|Location1.Y=0mil|Location2.Y=4090.866mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2000mil|Location1.Y=0mil|Location2.Y=4090.866mil|Absolute=True">Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And Small Component J5v-53047-0210 (977.284mil,3995.394mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2384.764mil|Location1.Y=0mil|Location2.Y=4021.811mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2384.764mil|Location1.Y=0mil|Location2.Y=4021.811mil|Absolute=True">Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And Small Component JFl-61300211121 (2270mil,3960mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2000mil|Location1.Y=0mil|Location2.Y=4625.877mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2000mil|Location1.Y=0mil|Location2.Y=4625.877mil|Absolute=True">Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SMT Small Component C1-CL10A105KA8NNNC (1412.673mil,4578.394mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3457.798mil|Location1.Y=0mil|Location2.Y=4617.402mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3457.798mil|Location1.Y=0mil|Location2.Y=4617.402mil|Absolute=True">Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SMT Small Component C2-CL10A105KA8NNNC (3410.315mil,4580mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2000mil|Location1.Y=0mil|Location2.Y=3857.402mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2000mil|Location1.Y=0mil|Location2.Y=3857.402mil|Absolute=True">Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SMT Small Component C3-CL10A105KA8NNNC (1135mil,3820mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2000mil|Location1.Y=0mil|Location2.Y=3920.669mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2000mil|Location1.Y=0mil|Location2.Y=3920.669mil|Absolute=True">Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SMT Small Component C4-CL03A104KQ3NNNC (1130.039mil,3900mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2883.228mil|Location1.Y=0mil|Location2.Y=4335.433mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2883.228mil|Location1.Y=0mil|Location2.Y=4335.433mil|Absolute=True">Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SMT Small Component DB-LTST-C193TBKT-5A (2805.472mil,4300mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2881.772mil|Location1.Y=0mil|Location2.Y=4434.449mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2881.772mil|Location1.Y=0mil|Location2.Y=4434.449mil|Absolute=True">Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SMT Small Component DG-LTST-C193KGKT-5A (2805mil,4400mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2881.772mil|Location1.Y=0mil|Location2.Y=4531.417mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2881.772mil|Location1.Y=0mil|Location2.Y=4531.417mil|Absolute=True">Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SMT Small Component DR-LTST-C193KRKT-5A (2805mil,4495mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2000mil|Location1.Y=0mil|Location2.Y=4766.879mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2000mil|Location1.Y=0mil|Location2.Y=4766.879mil|Absolute=True">Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SMT Small Component R1-RMCF1206FT10K0 (1464.158mil,4718.489mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3458.39mil|Location1.Y=0mil|Location2.Y=4825.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3458.39mil|Location1.Y=0mil|Location2.Y=4825.57mil|Absolute=True">Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SMT Small Component R2-RMCF1206FT10K0 (3410mil,4730mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2708.465mil|Location1.Y=0mil|Location2.Y=4344.291mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2708.465mil|Location1.Y=0mil|Location2.Y=4344.291mil|Absolute=True">Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SMT Small Component RB-ERJ-8ENF1000V (2618.898mil,4300mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2710.669mil|Location1.Y=0mil|Location2.Y=4444.291mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2710.669mil|Location1.Y=0mil|Location2.Y=4444.291mil|Absolute=True">Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SMT Small Component RG-ERJ-8GEYJ271V (2621.102mil,4400mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2708.465mil|Location1.Y=0mil|Location2.Y=4539.291mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2708.465mil|Location1.Y=0mil|Location2.Y=4539.291mil|Absolute=True">Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SMT Small Component RR-ERJ-8GEYJ271V (2618.898mil,4495mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2000mil|Location1.Y=0mil|Location2.Y=3774.095mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Brett\Documents\Capstone\OBC-Controller\CDH.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2000mil|Location1.Y=0mil|Location2.Y=3774.095mil|Absolute=True">Room Definition: Between Room MAPLE_CDH_Periph (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('MAPLE_CDH_Periph')) And SOIC Component U2-ADC121C027CIMK (1177.244mil,3692.401mil) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
