@@ -49,6 +49,57 @@ PrefsVaultGUID=
 PrefsRevisionGUID=
 
 [Document1]
+DocumentPath=..\..\..\Downloads\ESP32_WROOM_32UE_N16\AltiumDesigner\ESP32-WROOM-32UE-N16.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=GEHQMFFP
+
+[Document2]
+DocumentPath=..\..\..\Downloads\ESP32_WROOM_32UE_N16\AltiumDesigner\ESP32-WROOM-32UE-N16.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=BBDJRJQT
+
+[Document3]
+DocumentPath=TEST.PcbDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=UUVPGOUJ
+
+[Document4]
 DocumentPath=MAPLE_CDH_Cntrlr.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -65,7 +116,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=DBLDPMJQ
 
-[Document2]
+[Document5]
 DocumentPath=MAPLE_CDH_Periph.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -82,7 +133,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=HZMLVXTJ
 
-[Document3]
+[Document6]
 DocumentPath=CDH.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -101,6 +152,10 @@ DocumentUniqueId=BHRGRQNL
 
 [GeneratedDocument1]
 DocumentPath=Project Outputs for MAPLE_CDH\Design Rule Check - CDH.html
+DItemRevisionGUID=
+
+[GeneratedDocument2]
+DocumentPath=Project Outputs for MAPLE_CDH\Design Rule Check - TEST.html
 DItemRevisionGUID=
 
 [Configuration1]
@@ -1110,11 +1165,6 @@ OutputName11=Specctra Design PCB
 OutputDocumentPath11=
 OutputVariantName11=
 OutputDefault11=0
-OutputType12=Web ReviewOutputName
-OutputName12=Web Review Data
-OutputDocumentPath12=
-OutputVariantName12=
-OutputDefault12=0
 
 [OutputGroup10]
 Name=PostProcess Outputs
