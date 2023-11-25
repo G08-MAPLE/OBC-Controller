@@ -1,0 +1,27 @@
+Change Component Footprint: Designator=U1 Old Footprint=CON_436500227_MOL New Footprint=ESP32-32UE_EXP
+Added Pin To Net: NetName=NetC1_2 Pin=U1-3
+Added Pin To Net: NetName=NetU1_10 Pin=U1-10
+Added Pin To Net: NetName=NetU1_11 Pin=U1-11
+Added Pin To Net: NetName=NetU1_12 Pin=U1-12
+Added Pin To Net: NetName=NetJTag_1 Pin=U1-13
+Added Pin To Net: NetName=NetJTag_2 Pin=U1-14
+Added Pin To Net: NetName=GND Pin=U1-15
+Added Pin To Net: NetName=NetJTag_3 Pin=U1-16
+Added Pin To Net: NetName=NetJTag_4 Pin=U1-23
+Added Pin To Net: NetName=NetJFl_1 Pin=U1-25
+Added Pin To Net: NetName=NetRB_1 Pin=U1-30
+Added Pin To Net: NetName=NetRG_1 Pin=U1-31
+Added Pin To Net: NetName=NetRR_1 Pin=U1-33
+Added Pin To Net: NetName=NetJUart_3 Pin=U1-34
+Added Pin To Net: NetName=NetJUart_2 Pin=U1-35
+Added Pin To Net: NetName=NetSW1_4 Pin=U1-37
+Added Pin To Net: NetName=GND Pin=U1-38
+Added Pin To Net: NetName=GND Pin=U1-39
+Added Pin To Net: NetName=GND Pin=U1-40
+Added Pin To Net: NetName=GND Pin=U1-41
+Added Pin To Net: NetName=GND Pin=U1-42
+Added Pin To Net: NetName=GND Pin=U1-43
+Added Pin To Net: NetName=GND Pin=U1-44
+Added Pin To Net: NetName=GND Pin=U1-45
+Added Pin To Net: NetName=GND Pin=U1-46
+Added Pin To Net: NetName=GND Pin=U1-47
