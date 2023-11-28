@@ -1,0 +1,40 @@
+------------------------------------------------------------------------------------------
+Gerber File Extension Report For: TEST.GBR   28/11/23  12:07:38 PM
+------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------
+Layer Extension     Layer Description                      
+------------------------------------------------------------------------------------------
+.gbr                Top Layer                               
+.gbr                Bottom Layer                            
+.gbr                Bottom Pad Master                       
+.gbr                Top Pad Master                          
+.gbr                Bottom Paste                            
+.gbr                Bottom Overlay                          
+.gbr                Bottom Solder                           
+.gbr                Top Overlay                             
+.gbr                Top Paste                               
+.gbr                Top Solder                              
+.gbr                Keep-Out Layer                          
+.gbr                Bottom Component Center                 
+.gbr                Bottom Designator                       
+.gbr                Bottom Courtyard                        
+.gbr                Bottom Assembly                         
+.gbr                Top Component Center                    
+.gbr                Mechanical 1                            
+.gbr                Mechanical 3                            
+.gbr                Bottom 3D Body                          
+.gbr                Top Courtyard                           
+.gbr                Top 3D Body                             
+.gbr                Top Component Outline                   
+.gbr                Top Assembly                            
+.gbr                Bottom Component Outline                
+.gbr                Top Solder (Board Layer Stack)          
+.gbr                Bottom Solder (Board Layer Stack)       
+.gbr                Profile                                 
+.gbr                Non-plated through-hole drill file      
+.gbr                Plated through-hole drill file          
+.gbr                Drill Drawing                           
+.gbr                Drill Guide                             
+------------------------------------------------------------------------------------------

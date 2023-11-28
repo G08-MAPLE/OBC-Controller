@@ -1,0 +1,17 @@
+Added Component: Designator=Jxbee(MOLEX_0436500415)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Molex"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "0436500415"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/0436500415/Molex/view-part/425083/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=Jxbee-1
+Added Pin To Net: NetName=NetC2_1 Pin=Jxbee-4
+Added Pin To Net: NetName=NetJxbee_2 Pin=Jxbee-2
+Added Pin To Net: NetName=NetJxbee_2 Pin=U1-27
+Added Net: Name=NetJxbee_2
+Added Pin To Net: NetName=NetJxbee_3 Pin=Jxbee-3
+Added Pin To Net: NetName=NetJxbee_3 Pin=U1-26
+Added Net: Name=NetJxbee_3
+Added Member To Class: ClassName=MAPLE_CDH_Periph Member=Component Jxbee 0436500415

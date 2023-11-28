@@ -1,0 +1,39 @@
+Removed Pin From Net: NetName=NetJ1_1 Pin=J1-1
+Removed Pin From Net: NetName=GND Pin=J1-2
+Removed Pin From Net: NetName=GND Pin=J3v3-2
+Removed Pin From Net: NetName=NetC3_1 Pin=J5v-1
+Removed Pin From Net: NetName=GND Pin=J5v-2
+Change Component Designator: OldDesignator=J3v3 NewDesignator=J1
+Change Component Designator: OldDesignator=J5v NewDesignator=J3
+Change Component Designator: OldDesignator=J25v NewDesignator=J2
+Added Component: Designator=J4(CON_436500227_MOL)
+Add component (AddParameter): Name = "Copyright"; Value = "Copyright (C) 2023 Ultra Librarian. All rights reserved."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Digi-Key_Part_Number_1"; Value = "WM10656-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "436500227"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr_Name"; Value = "Molex Connector Corporation"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "DEV"; VariantName = "[No Variations]"
+Added Component: Designator=J5(CON-SMA)
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "rev1.1, Jan-2008"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "SMA Female PCB Mount Connector, Thru-Hole, 7 x 7 mm Body"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "CON-SMA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "rev1.1, Jan-2008"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC3_1 Pin=J1-2
+Added Pin To Net: NetName=GND Pin=J4-1
+Added Pin To Net: NetName=GND Pin=J4-2
+Added Pin To Net: NetName=NetJ1_1 Pin=J5-1
+Added Pin To Net: NetName=GND Pin=J5-2
+Added Pin To Net: NetName=GND Pin=J5-3
+Added Pin To Net: NetName=GND Pin=J5-4
+Added Pin To Net: NetName=GND Pin=J5-5
+Change Net Name : Old Net Name=NetJ1_1 New Net Name=NetJ5_1
+Change Net Name : Old Net Name=NetJ25v_1 New Net Name=NetJ2_1
+Added Pin To Net: NetName=NetJ3_1 Pin=J3-1
+Added Net: Name=NetJ3_1
+Added Pin To Net: NetName=NetJ3_2 Pin=J3-2
+Added Net: Name=NetJ3_2
+Added Member To Class: ClassName=MAPLE_CDH_Periph Member=Component J1 436500227
+Added Member To Class: ClassName=MAPLE_CDH_Periph Member=Component J2 436500227
+Added Member To Class: ClassName=MAPLE_CDH_Periph Member=Component J3 436500227
+Added Member To Class: ClassName=MAPLE_CDH_Periph Member=Component J4 436500227
+Added Member To Class: ClassName=MAPLE_CDH_Periph Member=Component J5 CONSMA001
